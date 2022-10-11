@@ -1,0 +1,26 @@
+@use '../util/breakpoints.scss' as *;
+@use '../util/functions.scss' as *;
+@use '../util/mixins.scss' as *;
+
+
+.aside {
+
+    &__itemsCtn {
+        background-color: var(--darker-bg);
+        li svg {
+            cursor: pointer;
+            
+
+            * {
+                transition: all 200ms ease-in-out;
+                
+            }
+
+            &:hover * {
+                opacity: 1;
+                fill: var(--yellow) !important;
+                
+            }
+        }
+    }
+}

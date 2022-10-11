@@ -1,0 +1,11 @@
+// creating a css variable of our colors
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-bg: #1D2123;
+    --grey: #FFFFFF1C;
+    --darker-bg: #1A1E1F;
+    --yellow: #FACD66;
+    --glow-yellow: 0px 0px 11px rgba(250, 205, 102, 0.25);
+}

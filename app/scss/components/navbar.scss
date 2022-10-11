@@ -1,0 +1,60 @@
+@use '../util/breakpoints.scss' as *;
+@use '../util/functions.scss' as *;
+@use '../util/mixins.scss' as *;
+
+
+.nav {
+    width: 100vw;
+    
+    @include breakpoint-up(large) {
+        &__search {
+            position: absolute;
+            left: rem(150);
+            bottom: rem(20);
+        }
+    }
+
+    .mobile-nav {
+        // display: none;
+        background-color: var(--darker-bg);
+        max-width: 340px;
+        height: 83vh;
+        transform: translateX(-380px);
+        transition: all 1s ease-in-out;
+
+        li {
+            display: flex;
+            font-size: 1.15rem;
+            font-weight: 500;
+            width: 100%;
+            align-items: center;
+            gap: 25px;
+            cursor: pointer;
+            opacity: .7;
+            vertical-align: middle;
+            transition: all 300ms ease-in-out;
+            
+            &:not(:last-child) {
+                margin-bottom: 50px;
+            }
+
+            svg * {
+                transition: all 200ms ease-in-out;
+            }
+
+
+            & * {
+                align-self: center;
+            }
+
+            &:hover {
+                opacity: 1;
+
+                svg * {
+                    opacity: 1;
+                    fill: var(--yellow) !important;
+                }
+            }
+        }
+    }
+}
