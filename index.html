@@ -17,6 +17,9 @@
     <!-- tailwind css cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
 
 </head>
 
@@ -25,12 +28,16 @@
     <nav class="nav flex align-center p-5 px-8 pt-7 justify-between relative">
         <div class="nav__logo flex align-center cursor-pointer mr-8">
             <img class="hide-for-desktop mr-2" src="/assets/icons/menu 1.png" alt="">
+            <i class="bi bi-x text-5xl hide "></i>
             <img class="w-10" src="/assets/icons/logo.svg" alt="">
         </div>
 
         <div class="nav__search lg:mx-auto lg:mx-auto my-auto lg:max-w-2xl h-auto lg:w-full flex align-center h-1/2">
-            <img class="md:mr-5 cursor-pointer w-7 h-7 my-auto lg:bottom-0 lg:top-[8px]" src="/assets/icons/search.png"
-                alt="">
+                <svg class="md:mr-5 cursor-pointer w-7 h-7 my-auto lg:bottom-0 lg:top-[8px] mr-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="white" stroke-opacity="0.25" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 14L11.1 11.1" stroke="white" stroke-opacity="0.25" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
             <input
                 class="hide-for-mobile w-full mr-8 bg-transparent placeholder:text-slate-500 pl-9 ml-2 font-semibold "
                 placeholder="Search Artists" type="text">
@@ -179,41 +186,98 @@
 
     </aside>
 
-    <main class="main">
+    <main class="main py-5 mx-auto">
 
-        <div class="hero">
+        <div class="hero mx-5 md:mx-8 max-w-3xl lg:ml-[110px] relative lg:flex justify-between lg:max-w-[100%]">
 
-            <div class="hero__card">
-                <div class="left">
-                    <p class="top_text">Currated playlist</p>
-                    <h3 class="header_text">R & B Hits</h3>
-                    <p class="description">All mine, Lie again, Petty call me everyday,
+            <div class="hero__card relative p-5  md:flex justify-between ">
+                <div class="left lg:px-8">
+                    <p class="top_text mb-8 pb-8">Currated playlist</p>
+                    <h3 class="header_text text-3xl font-semibold mt-8 pt-8 ">R & B Hits</h3>
+                    <p class="description lg:max-w-xs">All mine, Lie again, Petty call me everyday,
                         Out of time, No love, Bad habit,
                         and so much more</p>
 
-                        <div class="likesCtn">
-                            <img src="/assets/images/Ellipse 2likes-imgs.png" alt="">
-                            <img src="/assets/images/Ellipse 3likes-imgs.png" alt="">
-                            <img src="/assets/images/Ellipse 4likes-imgs.png" alt="">
-                            <img src="/assets/images/Ellipse 5likes-imgs.png" alt="">
-                            <img src="/assets/images/Ellipse 6likes-imgs.png" alt="">
+                        <div class="likesCtn mt-8 pt-8 flex align-center ml-[-3px]">
+                            <img src="/assets/images/Ellipse 2.png" alt="">
+                            <img src="/assets/images/Ellipse 3.png" alt="">
+                            <img src="/assets/images/Ellipse 4.png" alt="">
+                            <img src="/assets/images/Ellipse 5.png" alt="">
+                            <img src="/assets/images/Ellipse 6.png" alt="">
 
-                            <div class="likesInfo">
-                                <img src="/assets/icons/heart.png" alt="">
-                                <p>33K Likes</p>
+                            <div class="likesInfo flex align-center ml-6 px-1">
+                                <svg  class="my-auto w-7 h-7 md:h-6 md:w-6 mr-1" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.51981 0.666973C4.93981 0.679746 5.34647 0.75308 5.74047 0.88708H5.77981C5.80647 0.899746 5.82647 0.913746 5.83981 0.926413C5.98714 0.973746 6.12647 1.02708 6.25981 1.10041L6.51314 1.21375C6.61314 1.26708 6.73314 1.36641 6.79981 1.40708C6.86647 1.44641 6.93981 1.48708 6.99981 1.53308C7.74047 0.96708 8.63981 0.660413 9.56647 0.666973C9.98714 0.666973 10.4071 0.726413 10.8065 0.860413C13.2671 1.66041 14.1538 4.36041 13.4131 6.72041C12.9931 7.92641 12.3065 9.02708 11.4071 9.92641C10.1198 11.1731 8.70714 12.2797 7.18647 13.2331L7.01981 13.3337L6.84647 13.2264C5.32047 12.2797 3.89981 11.1731 2.60047 9.91975C1.70714 9.02041 1.01981 7.92641 0.593141 6.72041C-0.160192 4.36041 0.726474 1.66041 3.21381 0.846413C3.40714 0.779746 3.60647 0.73308 3.80647 0.70708H3.88647C4.07381 0.679746 4.25981 0.666973 4.44647 0.666973H4.51981ZM10.4598 2.77375C10.1865 2.67975 9.88647 2.82708 9.78647 3.10708C9.69314 3.38708 9.83981 3.69375 10.1198 3.79308C10.5471 3.95308 10.8331 4.37375 10.8331 4.83975V4.86041C10.8205 5.01308 10.8665 5.16041 10.9598 5.27375C11.0531 5.38708 11.1931 5.45308 11.3398 5.46708C11.6131 5.45975 11.8465 5.24041 11.8665 4.95975V4.88041C11.8865 3.94641 11.3205 3.10041 10.4598 2.77375Z" fill="white"/>
+                                    </svg>
+                                    
+                                <p class="my-auto font-semibold text-md md:text-sm lg:ml-3 z-10">33K Likes</p>
                             </div>
                         </div>
                 </div>
-                <div class="right">
-                    <img class="hide-for-mobile" src="/assets/images/Pexels Photo by Eric Esma.png" alt="">
+                <div class="right translate-y-5 absolute right-0 bottom-5">
+                    <img class="hide-for-mobile " src="/assets/images/Pexels Photo by Eric Esma.png" alt="">
                 </div>
 
             </div>
-            <div class="hero__topchart">
-                
+
+            <div class="hero__topchart my-8 mt-8 lg:mt-0 lg:px-5">
+                <h5 class="header font-semibold text-xl mt-2 pb-4">Top charts</h5>
+
+                <div class="my-container flex lg:flex-col">
+                    <div class="topchartCtn lg:py-2 lg:px-8  mb-2 lg:pt-6">
+                        <div class="left lg:flex  gap-x-5">
+                            <img class="w-32 lg:w-16" src="/assets/images/top-chart (2).png" alt="">
+                            <div class="write-up">
+                                <h4 class="text-xl lg:text-base font-semibold">Golden age of 80s</h4>
+                                <p class="opacity-50">Sean swadder</p>
+                                <p>2:30:10</p>
+                            </div>
+    
+                        </div>
+                        <div class="right">
+                            <img  src="/assets/icons/Stroke-1.png" alt="">
+                        </div>
+                    </div>
+    
+                    <div class="topchartCtn lg:py-2 lg:px-8  mb-2 lg:pt-6" >
+                    <div class="left lg:flex  gap-x-5">
+                            <img class="w-32 lg:w-16" src="/assets/images/top-chart (1).png" alt="">
+                            <div class="write-up">
+                                <h4 class="text-xl lg:text-base font-semibold">Reggae “n” blues</h4>
+                                <p class="opacity-50">DJ yk mule</p>
+                                <p>1:20:10</p>
+                            </div>
+    
+                        </div>
+                        <div class="right">
+                            <img  src="/assets/icons/Stroke-1.png" alt="">
+                        </div>
+                    </div>
+    
+                    <div class="topchartCtn lg:py-2 lg:px-8  mb-2 lg:pt-6" >
+                        <div class="left lg:flex  gap-x-5">
+                            <img src="/assets/images/Rectangle 17.png" alt="">
+                            <div class="write-up">
+                                <h4 class="text-xl lg:text-base font-semibold">Tomorrow's tune</h4>
+                                <p class="opacity-50">Obi datti</p>
+                                <p>2:01:10</p>
+                            </div>
+    
+                        </div>
+                        <div class="right">
+                            <img src="/assets/icons/Stroke-1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
 
         </div>
+
+        <section class="new-releases">
+            
+        </section>
 
     </main>
 

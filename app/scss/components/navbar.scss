@@ -5,6 +5,12 @@
 
 .nav {
     width: 100vw;
+
+    &__search input {
+        &:focus {
+            outline: none;
+        }
+    }
     
     @include breakpoint-up(large) {
         &__search {
@@ -57,4 +63,9 @@
             }
         }
     }
+}
+
+// utility class to hide stuff
+.hide {
+    display: none !important;
 }

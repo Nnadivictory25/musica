@@ -1,3 +1,122 @@
 @use '../util/breakpoints.scss' as *;
 @use '../util/functions.scss' as *;
 @use '../util/mixins.scss' as *;
+
+
+.hero {
+    overflow-x: hidden;
+
+
+    &__card {
+        flex: 1 1 60%;
+        @include breakpoint-down(medium) {
+            border-radius: rem(20);
+        }
+        border-radius: rem(40);
+
+        background-color: var(--card-bg);
+        @include breakpoint-down(medium) {
+            background-image: url(/assets/images/mb-spiral.png);
+            background-position: 100% -30%;
+        }
+        @include breakpoint-up(large) {
+            background-image: url(/assets/images/spiral.png);
+            background-size: 80%;
+            background-position: 160% 100%;
+        }
+        background-repeat: no-repeat;
+
+        .left {
+            .header_text {
+                @include breakpoint-down(medium) {
+                    margin-top: rem(175);
+                }
+            }
+
+
+            .likesCtn {
+
+                @include breakpoint-up(large) {
+                    margin-top: rem(80);
+                }
+
+                @include breakpoint-down(medium) {
+                    margin-top: rem(10);
+                }
+                // .likesInfo {
+
+                // }
+
+                & > img{
+                    width: 40px;
+                    height: 40px;
+    
+                    &:not(:first-child) {
+                        margin-left: -15px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__topchart {
+        flex: 1 1 35%;
+
+        .my-container {
+            margin: 0 auto;
+            @include breakpoint-down(medium) {
+                overflow-x: scroll;
+            }
+            
+            &::-webkit-scrollbar {
+                display: none;
+              }
+
+            
+            .topchartCtn {
+                min-width: 100%;
+                max-width: rem(417);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                background-color: var(--darker-bg);
+                cursor: pointer;
+                transition: all 300ms ease-in-out;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                // @include breakpoint-up(large) {
+                //     border-radius: 40px;
+                // }
+                
+                @include breakpoint-down(medium) {
+                    margin-right: rem(15);
+                    padding: rem(15);
+                }
+                border-radius: rem(20);
+
+                .left > * {
+                    margin-bottom: 20px;
+                }
+
+                .right > img {
+                    width: 2.2rem;
+                    border: 2px solid var(--grey);
+                    padding: 7px;
+                    border-radius: 100px;
+                }
+
+                @include breakpoint-down(medium) {
+                  .right > img{
+                    position: absolute;
+                    top: 30px;
+                    right: 20px;
+                  }
+                }
+            }
+        }
+    }
+}
