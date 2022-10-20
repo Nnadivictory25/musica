@@ -1,0 +1,37 @@
+@use '../util/breakpoints.scss' as *;
+@use '../util/functions.scss' as *;
+@use '../util/mixins.scss' as *;
+
+
+@keyframes slide-in {
+    from {
+        transform: translateX(400px);
+        visibility: hidden;
+    }
+    
+    to {
+        transform: translateX(5px);
+        visibility: visible;
+    }
+
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(5px);
+        visibility: visible;
+    }
+
+    to {
+        transform: translateX(400px);
+        visibility: hidden;
+    }
+}
+
+.slide-in {
+    animation: slide-in .3s ease-in-out forwards;
+}
+
+.slide-out {
+    animation: slide-out .3s ease-in-out forwards;
+}

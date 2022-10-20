@@ -3,3 +3,35 @@
 
 // This is where mixins will be created . 
 
+@mixin rowFunction {
+    height: auto;
+    
+
+    &__cardsCtn {
+        overflow-x: scroll;
+        width: 100%;
+
+        &::-webkit-scrollbar {
+            display: none;
+          }
+
+          .card {
+            min-width: rem(153);
+
+            &:not(:last-child) {
+                margin-right: rem(30);
+            }
+
+            img {
+                width: 100%;
+                border-radius: rem(25);
+                margin-bottom: rem(10);
+            }
+
+            p:last-child {
+                opacity: .7;
+                padding-top: rem(3);
+            }
+          }
+    }
+}

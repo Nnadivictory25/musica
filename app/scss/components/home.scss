@@ -84,13 +84,11 @@
                 cursor: pointer;
                 transition: all 300ms ease-in-out;
 
-                &:hover {
-                    transform: scale(1.05);
+                @include breakpoint-up(large) {
+                    &:hover {
+                        transform: scale(1.05);
+                    }
                 }
-
-                // @include breakpoint-up(large) {
-                //     border-radius: 40px;
-                // }
                 
                 @include breakpoint-down(medium) {
                     margin-right: rem(15);
@@ -119,4 +117,13 @@
             }
         }
     }
+}
+
+
+.new-releases {
+    @include rowFunction;
+}
+
+.popular-section {
+    @include rowFunction;
 }
